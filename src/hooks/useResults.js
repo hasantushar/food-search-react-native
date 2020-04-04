@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import yelp from '../api/yelp';
 
 export default () => {
@@ -6,7 +6,7 @@ export default () => {
     const [errorMessage, setErrorMessage] = useState('');
 
     const searchApi = async (searchTerm) =>{
-        console.log('Reloaded SearchScreen Component');
+        //console.log('Returned With Results');
         try 
         {
             const response = await yelp.get('/search', {
