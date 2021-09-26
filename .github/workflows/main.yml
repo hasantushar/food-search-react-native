@@ -16,7 +16,7 @@ jobs:
         run: cd android && chmod +x ./gradlew && ./gradlew assembleRelease
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: release
           path: android/app/build/outputs/apk/debug/app-debug.apk
