@@ -8,10 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./central
+        working-directory: central/
     steps:
       - uses: actions/checkout@v2
-      - run : cd ./central
       - uses: actions/setup-node@master
       - uses: c-hive/gha-yarn-cache@v1
 
