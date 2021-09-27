@@ -6,9 +6,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./central
+    env:
+      working-directory: ./central
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@master
