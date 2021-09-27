@@ -12,7 +12,6 @@ jobs:
         working-directory: central/
     steps:
       - uses: actions/checkout@v2
-      - run : tree
       - uses: actions/setup-node@master
       - uses: c-hive/gha-yarn-cache@v2
         with:
@@ -39,7 +38,7 @@ jobs:
         run: cd android && chmod +x ./gradlew
 
       - name: Build Android App Bundle
-        run: cd android && ./gradlew assembleRelease --no-daemon && tree
+        run: cd android && ./gradlew assembleRelease --no-daemon
           
       - name: Sign App Bundle
         id: sign_app
