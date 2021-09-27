@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        shell: bash
         working-directory: ./central
     steps:
       - uses: actions/checkout@v2
@@ -16,8 +15,7 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v1
 
       - name: Install dependencies
-        run: yarn
-        run: npx jetify
+        run: yarn && npx jetify
         
       - name: Cache Gradle Wrapper
         uses: actions/cache@v2
