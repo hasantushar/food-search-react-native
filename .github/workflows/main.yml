@@ -13,7 +13,7 @@ jobs:
         run: yarn
 
       - name: Build Android Release
-        run: cd android && chmod +x ./gradlew && ./gradlew assembleRelease && cd app && tree
+        run: cd android && chmod +x ./gradlew && ./gradlew assembleRelease && tree
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
