@@ -15,7 +15,9 @@ jobs:
       - run : tree
       - uses: actions/setup-node@master
       - uses: c-hive/gha-yarn-cache@v2
-
+        with:
+          directory: central/
+            
       - name: Install dependencies
         run: yarn && npx jetify
         
