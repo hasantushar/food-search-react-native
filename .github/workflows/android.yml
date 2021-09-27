@@ -12,7 +12,7 @@ jobs:
         working-directory: central/
     steps:
       - uses: actions/checkout@v2
-      - run : cd central/
+      - run : tree
       - uses: actions/setup-node@master
       - uses: c-hive/gha-yarn-cache@v1
 
