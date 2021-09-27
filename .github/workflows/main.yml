@@ -13,10 +13,4 @@ jobs:
         run: yarn
 
       - name: Build Android Release
-        run: cd android && chmod +x ./gradlew && ./gradlew assembleRelease && tree
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: app-debug.apk
-          path: android/app/build/outputs/apk/debug/
+        run: cd android && chmod +x ./gradlew && ./gradlew assembleDebug && tree
