@@ -10,8 +10,8 @@ jobs:
       run:
         working-directory: ./central
     steps:
-      - run : cd ./central
       - uses: actions/checkout@v2
+      - run : cd ./central
       - uses: actions/setup-node@master
       - uses: c-hive/gha-yarn-cache@v1
 
