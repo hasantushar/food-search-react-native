@@ -1,0 +1,6 @@
+{
+  "name": "central",
+  "ios": {
+    "bundleIdentifier": "com.minasu.central"
+  }
+}
