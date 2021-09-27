@@ -3,12 +3,13 @@ name: Build Android
 on:
   push:
     branches: [ gh-actions ]
-defaults:
-  run:
-    working-directory: ./central
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./central
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@master
