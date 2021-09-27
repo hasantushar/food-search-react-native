@@ -10,7 +10,7 @@ jobs:
       run:
         working-directory: ./central
     steps:
-      - run : pwd
+      - run : cd ./central
       - uses: actions/checkout@v2
       - uses: actions/setup-node@master
       - uses: c-hive/gha-yarn-cache@v1
@@ -21,13 +21,13 @@ jobs:
       - name: Cache Gradle Wrapper
         uses: actions/cache@v2
         with:
-          path: ~/.gradle/wrapper
+          path: ~/central/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
 
       - name: Cache Gradle Dependencies
         uses: actions/cache@v2
         with:
-          path: ~/.gradle/caches
+          path: ~/central/.gradle/caches
           key: ${{ runner.os }}-gradle-caches-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-caches-
@@ -42,7 +42,7 @@ jobs:
         id: sign_app
         uses: r0adkll/sign-android-release@v1
         with:
-          releaseDirectory: android/app/build/outputs/apk/release
+          releaseDirectory: central/android/app/build/outputs/apk/release
           signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
           alias: ${{ secrets.ANDROID_SIGNING_ALIAS }}
           keyStorePassword: ${{ secrets.ANDROID_SIGNING_STORE_PASSWORD }}
