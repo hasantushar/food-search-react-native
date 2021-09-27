@@ -2,7 +2,7 @@
 name: Build Android
 on:
   push:
-    branches: [ gh-actions ]
+    branches: [ hasantushar-patch-1 ]
 jobs:
   build:
     runs-on: ubuntu-latest
