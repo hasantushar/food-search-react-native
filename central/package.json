@@ -39,7 +39,7 @@
     "react": "16.13.1",
     "react-content-loader": "^6.0.3",
     "react-dom": "16.13.1",
-    "react-native": "~0.63.4",
+    "react-native": "~0.64.1",
     "react-native-animated-spinkit": "^1.5.2",
     "react-native-app-auth": "^6.4.0",
     "react-native-device-info": "^8.1.3",
